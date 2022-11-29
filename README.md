@@ -11,13 +11,13 @@ Il programma non effettua molti controlli circa i dati di input se non la coeren
 Esempi di esecuzione:
 
 Domanda tipologia 1
-    ///
+
     *** Benvenuto! Per iniziare premi un tasto qualsiasi ***
     s
     *** Domanda numero 1 ***
     Quante alterazioni ha la scala di do# minore? (e.g. ==> 3 #, se zero allora 0 #)
     4 #
-    Risposta esatta
+    Risposta esatta!
     
     *** Continuare?(y/n) ***
     y
@@ -25,15 +25,15 @@ Domanda tipologia 1
     Quante alterazioni ha la scala di Fa maggiore? (e.g. ==> 3 #, se zero allora 0 #)
     2 b
     Risposta errata. La risposta corretta era:  1 b
-    ///
+
 Domanda tipologia 2
-    ///
+
     *** Benvenuto! Per iniziare premi un tasto qualsiasi ***
     x
     *** Domanda numero 1 ***
     Quali sono le note alterate nella scala di re# minore? (e.g. ==> Do# Re# ...; se la nessuna allora scrivere ==> nessuna)
     fa# do# sol# re# la# mi#
-    Risposta esatta
+    Risposta esatta!
 
     *** Continuare?(y/n) ***
     y
@@ -41,15 +41,15 @@ Domanda tipologia 2
     Quali sono le note alterate nella scala di Mi maggiore? (e.g. ==> Do# Re# ...; se la nessuna allora scrivere ==> nessuna)
     do#
     Risposta errata. La risposta corretta era:  [Fa# Do# Sol# Re#]
-    ///
+
 Domanda tipologia 3
-    ///
+
     *** Benvenuto! Per iniziare premi un tasto qualsiasi ***
     x
     *** Domanda numero 1 ***
     Qual'è la relativa scala minore di Dob maggiore? (e.g. Sib minore)
     lab miNORE
-    Risposta esatta
+    Risposta esatta!
 
     *** Continuare?(y/n) ***
     y
@@ -57,9 +57,9 @@ Domanda tipologia 3
     Qual'è la relativa scala minore di La maggiore? (e.g. Sib minore)
     solb minore
     Risposta errata. La risposta corretta era:  fa# minore
-    ///
+    
 Domanda tipologia 4
-    ///
+
     *** Benvenuto! Per iniziare premi un tasto qualsiasi ***
     x
     *** Domanda numero 1 ***
@@ -79,4 +79,4 @@ Domanda tipologia 4
     Risposta errata.
     *** Info extra ***
     L'accordo Re#m7b5 è vii grado in Mi maggiore (o ii grado in do# minore)
-    ///   
+  
