@@ -1,0 +1,16 @@
+Scala Maggiore;Scala Minore;nr alterazioni;tipo alterazioni;nota alterata 1;nota alterata 2;nota alterata 3;nota alterata 4;nota alterata 5;nota alterata 6;nota alterata 7;I;ii;iii;IV;V;vi;vii;I;ii;iii;IV;V;vi;vii
+Do maggiore;la minore;0;#;nessuna;;;;;;;Do;Re;Mi;Fa;Sol;La;Si;Domaj7;Re-7;Mi-7;Famaj7;Sol7;La-7;Si�
+Sol maggiore;mi minore;1;#;Fa#;;;;;;;Sol;La;Si;Do;Re;Mi;Fa#;Solmaj7;La-7;Si-7;Domaj7;Re7;Mi-7;Fa#�
+Re maggiore;si minore;2;#;Fa#;Do#;;;;;;Re;Mi;Fa#;Sol;La;Si;Do#;Remaj7;Mi-7;Fa#-7;Solmaj7;La7;Si-7;Do#�
+La maggiore;fa# minore;3;#;Fa#;Do#;Sol#;;;;;La;Si;Do#;Re;Mi;Fa#;Sol#;Lamaj7;Si-7;Do#-7;Remaj7;Mi7;Fa#-7;Sol#�
+Mi maggiore;do# minore;4;#;Fa#;Do#;Sol#;Re#;;;;Mi;Fa#;Sol#;La;Si;Do#;Re#;Mimaj7;Fa#-7;Sol#-7;Lamaj7;Si7;Do#-7;Re#�
+Si maggiore;sol# minore;5;#;Fa#;Do#;Sol#;Re#;La#;;;Si;Do#;Re#;Mi;Fa#;Sol#;La#;Simaj7;Do#-7;Re#-7;Mimaj7;Fa#7;Sol#-7;La#�
+Fa# maggiore;re# minore;6;#;Fa#;Do#;Sol#;Re#;La#;Mi#;;Fa#;Sol#;La#;Si;Do#;Re#;Mi#;Fa#maj7;Sol#-7;La#-7;Simaj7;Do#7;Re#-7;Mi#�
+Do# maggiore;la# minore;7;#;Fa#;Do#;Sol#;Re#;La#;Mi#;Si#;Do#;Re#;Mi#;Fa#;Sol#;La#;Si#;Do#maj7;Re#-7;Mi#-7;Fa#maj7;Sol#7;La#-7;Si#�
+Fa maggiore;re minore;1;b;Sib;;;;;;;Fa;Sol;La;Sib;Do;Re;Mi;Famaj7;Sol-7;La-7;Sibmaj7;Do7;Re-7;Mi�
+Sib maggiore;sol minore;2;b;Sib;Mib;;;;;;Sib;Do;Re;Mib;Fa;Sol;La;Sibmaj7;Do-7;Re-7;Mibmaj7;Fa7;Sol-7;La�
+Mib maggiore;do minore;3;b;Sib;Mib;Lab;;;;;Mib;Fa;Sol;Lab;Sib;Do;Re;Mibmaj7;Fa-7;Sol-7;Labmaj7;Sib7;Do-7;Re�
+Lab maggiore;fa minore;4;b;Sib;Mib;Lab;Reb;;;;Lab;Sib;Do;Reb;Mib;Fa;Sol;Labmaj7;Sib-7;Do-7;Rebmaj7;Mib7;Fa-7;Sol�
+Reb maggiore;sib minore;5;b;Sib;Mib;Lab;Reb;Solb;;;Reb;Mib;Fa;Solb;Lab;Sib;Do;Rebmaj7;Mib-7;Fa-7;Solbmaj7;Lab7;Sib-7;Do�
+Solb maggiore;mib minore;6;b;Sib;Mib;Lab;Reb;Solb;Dob;;Solb;Lab;Sib;Dob;Reb;Mib;Fa;Solbmaj7;Lab-7;Sib-7;Dobmaj7;Reb7;Mib-7;Fa�
+Dob maggiore;lab minore;7;b;Sib;Mib;Lab;Reb;Solb;Dob;Fab;Dob;Reb;Mib;Fab;Solb;Lab;Sib;Dobmaj7;Reb-7;Mib-7;Fabmaj7;Solb7;Lab-7;Sib�
