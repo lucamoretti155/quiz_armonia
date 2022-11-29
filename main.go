@@ -90,7 +90,8 @@ func main() {
 	fmt.Scan(&s)
 	for {
 		rand.Seed(int64(time.Now().Nanosecond()))
-		tipoDomanda = rand.Intn(4)
+		tipoDomanda = 3 //rand.Intn(4)
+
 		contaDomande++
 		fmt.Println("*** Domanda numero", contaDomande, "***")
 		switch tipoDomanda {
@@ -114,7 +115,7 @@ func main() {
 	}
 	fmt.Println()
 	fmt.Println("Risposte esatte =", contaEsatte, " Domande in totale =", contaDomande)
-	fmt.Println("*** CIAO ***")
+	fmt.Println("*** CIAO! ***")
 }
 
 func LeggiScale(fileScale *os.File) (scale []Scala, err error) {
@@ -181,7 +182,7 @@ func QuanteAlterazioni(scale []Scala) int {
 	var rispostaTipo string
 	fmt.Scan(&rispostaNumero, &rispostaTipo)
 	if rispostaNumero == alterazioni && rispostaTipo == tipoAlterazioni {
-		fmt.Println("Risposta esatta")
+		fmt.Println("Risposta esatta!")
 		return 1
 	} else {
 		fmt.Println("Risposta errata. La risposta corretta era: ", alterazioni, tipoAlterazioni)
@@ -214,7 +215,7 @@ func QualiAlterazioni(scale []Scala) int {
 		}
 	}
 	if contaAlterazioni == alterazioni {
-		fmt.Println("Risposta esatta")
+		fmt.Println("Risposta esatta!")
 		return 1
 	} else {
 		fmt.Println("Risposta errata. La risposta corretta era: ", scalaEstratta.noteAlterate)
@@ -234,7 +235,7 @@ func RelativaMinore(scale []Scala) int {
 	scanner.Scan()
 	risposta = strings.ToLower(scanner.Text())
 	if strings.ToLower(risposta) == strings.ToLower(minore) {
-		fmt.Println("Risposta esatta")
+		fmt.Println("Risposta esatta!")
 		return 1
 	} else {
 		fmt.Println("Risposta errata. La risposta corretta era: ", minore)
