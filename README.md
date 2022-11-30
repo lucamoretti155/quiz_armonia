@@ -2,6 +2,7 @@
 
 Il programma ha come scopo quello di proporre domande all'utente sull'armonia musicale
 
+Il programma all'inizio esegue un caricamento tramite 2 file .txt presenti nella stessa cartella del file .go che contengono tutte le info per popolare delle variabili all'interno del programma.
 Le domande possono essere di 4 tipoligie differenti su tematiche specifiche proposte in maniera aleatoria, ma non esiste un numero finito di domande. L'utente può continuare il quiz per tutto il tempo che vuole. Ad ogni domanda verrà chiesto se questi vuole continuare o meno. Qualora l'utente decida di non continuare il programma termina salutando e stampando il numero di risposte esatte fornite e il relativo numero di domande totali.
 
 
