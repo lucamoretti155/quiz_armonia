@@ -90,7 +90,7 @@ func main() {
 	fmt.Scan(&s)
 	for {
 		rand.Seed(int64(time.Now().Nanosecond()))
-		tipoDomanda = 3 //rand.Intn(4)
+		tipoDomanda = rand.Intn(4)
 
 		contaDomande++
 		fmt.Println("*** Domanda numero", contaDomande, "***")
