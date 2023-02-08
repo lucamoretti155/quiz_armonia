@@ -29,6 +29,13 @@ type Scala struct {
 }
 
 func main() {
+	f, err := os.Open("intervalli.txt")
+	if err != nil {
+		fmt.Println("errore nell'apertura del file")
+		return
+	}
+	defer f.Close()
+	noteIntervalli, mappaIntervalli, err := LeggiIntervalli(f)
 	fileScale, err := os.Open("scale.txt")
 	if err != nil {
 		fmt.Println("errore nell'apertura del file")
@@ -90,7 +97,7 @@ func main() {
 	fmt.Scan(&s)
 	for {
 		rand.Seed(int64(time.Now().Nanosecond()))
-		tipoDomanda = rand.Intn(4)
+		tipoDomanda = rand.Intn(5)
 
 		contaDomande++
 		fmt.Println("*** Domanda numero", contaDomande, "***")
@@ -103,6 +110,8 @@ func main() {
 			contaEsatte += RelativaMinore(scale)
 		case 3:
 			contaEsatte += DoveTonicizza(accordi)
+		case 4:
+			contaEsatte += Intervalli(mappaIntervalli, noteIntervalli)
 		default:
 			continue
 		}
@@ -248,17 +257,18 @@ func DoveTonicizza(accordi map[string]Accordo) int {
 	var AccordoEstratto Accordo
 	AccordoEstratto = accordi[chiave]
 	var risposta string
-	fmt.Println("Dove tonicizza l'accordo", chiave)
+	fmt.Printf("In che tonalità maggiore si trova l'accordo %v?\n", chiave)
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
 	risposta = strings.ToLower(scanner.Text())
 	ok := false
 	var infoAggiuntiva string = "*** Info extra ***\n"
 	for _, info := range AccordoEstratto {
-		if strings.ToLower(info.tonalitàMaggiore) == risposta || strings.ToLower(info.tonalitàMinore) == risposta {
+		x := strings.Split(info.tonalitàMaggiore, " ")[0]
+		if strings.ToLower(x) == risposta {
 			ok = true
 		}
-		infoAggiuntiva += fmt.Sprintf("L'accordo %v è %v grado in %v (o %v grado in %v)\n", chiave, info.gradoInMaggiore, info.tonalitàMaggiore, info.gradoInMinore, info.tonalitàMinore)
+		infoAggiuntiva += fmt.Sprintf("L'accordo %v è %v grado in %v\n", chiave, info.gradoInMaggiore, info.tonalitàMaggiore)
 	}
 	var conta int
 	if ok {
@@ -280,4 +290,35 @@ func AccordoCasuale(accordi map[string]Accordo) string {
 		sl = append(sl, k)
 	}
 	return sl[n]
+}
+
+func LeggiIntervalli(file *os.File) (note []string, m map[string]string, err error) {
+	scanner := bufio.NewScanner(file)
+	m = make(map[string]string)
+	for scanner.Scan() {
+		riga := strings.Split(scanner.Text(), ";")
+		note = append(note, riga[0]+" - "+riga[1])
+		m[riga[0]+" - "+riga[1]] = riga[2]
+	}
+	if err = scanner.Err(); err != nil {
+		fmt.Printf("Error while reading the file! %v\n", err)
+		return
+	}
+	return
+}
+
+func Intervalli(m map[string]string, note []string) int {
+	rand.Seed(int64(time.Now().Nanosecond()))
+	i := rand.Intn(len(note) + 1)
+	fmt.Printf("Qual'è l'intervallo fra le note %v? (e.g. seconda maggiore)\n", note[i])
+	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Scan()
+	risposta := strings.ToLower(scanner.Text())
+	if strings.ToLower(risposta) == m[note[i]] {
+		fmt.Println("\nRisposta esatta!")
+		return 1
+	} else {
+		fmt.Println("\nRisposta errata. La risposta corretta era: ", m[note[i]])
+		return 0
+	}
 }
